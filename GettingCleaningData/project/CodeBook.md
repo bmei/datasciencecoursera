@@ -114,7 +114,7 @@ tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z, tBodyAcc_std_X, tBodyAcc_std_
 
 5) The average of each variable for each activity and each subject was computed; and
 
-6) The results of step 5) were output as an indepenent tidy data file named output_tidy_data.txt
+6) The results of step 5) were output as an indepenent tidy data file named output_tidy_data.txt.
 
 
 
