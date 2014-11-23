@@ -1,18 +1,18 @@
-# Course Project
+## Course Project
 
 ### Getting and Cleaning Smartphone Data for Human Activity Recognition Study
 
 NOTE: Much content from here was taken from [1] and [2]
 
 
-## Background
+### Background
 
 One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. Reyes-Ortiz, Anguita, Ghio, and Oneto from the Smartlab Non Linear Complex Systems Laboratory in Genoa, Italy did some experiments to collect data from the accelerometers from the Samsung Galaxy S smartphone for human activity recognition study. The experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, they captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments were video-recorded to label the data manually.
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
 
-## Data Files
+### Data Files
 
 The aforementioned data set archive can be downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
@@ -30,7 +30,7 @@ The source files we use to create the tidy data set from the extrated data archi
 *  `test/subject_test.txt`: The same as above but for test
 
 
-### Feature Selection in Source Data Files
+#### Feature Selection in Source Data Files
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -89,7 +89,7 @@ tBodyGyroJerkMean
 The complete list of variables of each feature vector is available in 'features.txt'
 
 
-### Variables in Cleaned Output Dataset
+#### Variables in Cleaned Output Dataset
 
 Variables within the tidy data set are as examined as follows (taken from [1]).
 
@@ -99,10 +99,10 @@ The second variable, activity, indicates what the subject did and contains value
 
 The rest are features selected for the output tidy dataset, which include the mean and standard deviations for each measurement. Eventually, 66 measurments were selected, as shown below, and the means of these measurements were calculated and written to the output data file named output_tidy_data.txt.
 
-tBodyAcc-mean-X, tBodyAcc-mean-Y, tBodyAcc-mean-Z, tBodyAcc-std-X, tBodyAcc-std-Y, tBodyAcc-std-Z, tGravityAcc-mean-X, tGravityAcc-mean-Y, tGravityAcc-mean-Z, tGravityAcc-std-X, tGravityAcc-std-Y, tGravityAcc-std-Z, tBodyAccJerk-mean-X, tBodyAccJerk-mean-Y, tBodyAccJerk-mean-Z, tBodyAccJerk-std-X, tBodyAccJerk-std-Y, tBodyAccJerk-std-Z, tBodyGyro-mean-X, tBodyGyro-mean-Y, tBodyGyro-mean-Z, tBodyGyro-std-X, tBodyGyro-std-Y, tBodyGyro-std-Z, tBodyGyroJerk-mean-X, tBodyGyroJerk-mean-Y, tBodyGyroJerk-mean-Z, tBodyGyroJerk-std-X, tBodyGyroJerk-std-Y, tBodyGyroJerk-std-Z, tBodyAccMag-mean, tBodyAccMag-std, tGravityAccMag-mean, tGravityAccMag-std, tBodyAccJerkMag-mean, tBodyAccJerkMag-std, tBodyGyroMag-mean, tBodyGyroMag-std, tBodyGyroJerkMag-mean, tBodyGyroJerkMag-std, fBodyAcc-mean-X, fBodyAcc-mean-Y, fBodyAcc-mean-Z, fBodyAcc-std-X, fBodyAcc-std-Y, fBodyAcc-std-Z, fBodyAccJerk-mean-X, fBodyAccJerk-mean-Y, fBodyAccJerk-mean-Z, fBodyAccJerk-std-X, fBodyAccJerk-std-Y, fBodyAccJerk-std-Z, fBodyGyro-mean-X, fBodyGyro-mean-Y, fBodyGyro-mean-Z, fBodyGyro-std-X, fBodyGyro-std-Y, fBodyGyro-std-Z, fBodyAccMag-mean, fBodyAccMag-std, fBodyBodyAccJerkMag-mean, fBodyBodyAccJerkMag-std, fBodyBodyGyroMag-mean, fBodyBodyGyroMag-std, fBodyBodyGyroJerkMag-mean, fBodyBodyGyroJerkMag-std
+tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z, tBodyAcc_std_X, tBodyAcc_std_Y, tBodyAcc_std_Z, tGravityAcc_mean_X, tGravityAcc_mean_Y, tGravityAcc_mean_Z, tGravityAcc_std_X, tGravityAcc_std_Y, tGravityAcc_std_Z, tBodyAccJerk_mean_X, tBodyAccJerk_mean_Y, tBodyAccJerk_mean_Z, tBodyAccJerk_std_X, tBodyAccJerk_std_Y, tBodyAccJerk_std_Z, tBodyGyro_mean_X, tBodyGyro_mean_Y, tBodyGyro_mean_Z, tBodyGyro_std_X, tBodyGyro_std_Y, tBodyGyro_std_Z, tBodyGyroJerk_mean_X, tBodyGyroJerk_mean_Y, tBodyGyroJerk_mean_Z, tBodyGyroJerk_std_X, tBodyGyroJerk_std_Y, tBodyGyroJerk_std_Z, tBodyAccMag_mean, tBodyAccMag_std, tGravityAccMag_mean, tGravityAccMag_std, tBodyAccJerkMag_mean, tBodyAccJerkMag_std, tBodyGyroMag_mean, tBodyGyroMag_std, tBodyGyroJerkMag_mean, tBodyGyroJerkMag_std, fBodyAcc_mean_X, fBodyAcc_mean_Y, fBodyAcc_mean_Z, fBodyAcc_std_X, fBodyAcc_std_Y, fBodyAcc_std_Z, fBodyAccJerk_mean_X, fBodyAccJerk_mean_Y, fBodyAccJerk_mean_Z, fBodyAccJerk_std_X, fBodyAccJerk_std_Y, fBodyAccJerk_std_Z, fBodyGyro_mean_X, fBodyGyro_mean_Y, fBodyGyro_mean_Z, fBodyGyro_std_X, fBodyGyro_std_Y, fBodyGyro_std_Z, fBodyAccMag_mean, fBodyAccMag_std, fBodyBodyAccJerkMag_mean, fBodyBodyAccJerkMag_std, fBodyBodyGyroMag_mean, fBodyBodyGyroMag_std, fBodyBodyGyroJerkMag_mean, fBodyBodyGyroJerkMag_std
 
 
-## Procedure of Data Processing
+### Procedure of Data Processing
 
 1) The training and test data sets were combined into one single dataset;
 
@@ -118,7 +118,7 @@ tBodyAcc-mean-X, tBodyAcc-mean-Y, tBodyAcc-mean-Z, tBodyAcc-std-X, tBodyAcc-std-
 
 
 
-## References
+### References
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 [2] http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
