@@ -7,7 +7,7 @@ Bing Mei
 ### Instructions
 Save the run_analysis.R script file in your working directory and specify your working directory as the argument for function setwd() on line 14.
 
-After donwloading the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzipping it, place the data folder in your working directory. The data folder should use the original given name - "UCI HAR Dataset" and don't change anything in the data folder.
+After donwloading the data and unzipping it, place the data folder in your working directory. The data folder should use the original given name - "UCI HAR Dataset" and don't change anything in the data folder.
 
 Run the R script from RStudio or R Console.  The script outputs a text data file named "output_tidy_data.txt" in the "UCI HAR Dataset" directory.
 
