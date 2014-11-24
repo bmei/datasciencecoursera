@@ -119,23 +119,23 @@ tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z, tBodyAcc_std_X, tBodyAcc_std_
 
 ### Variables in the R Script
 
-x_train <- stores data from train/X_train.txt file
-y_train <- stores data from train/y_train.txt file
-subj_train <- stores data from train/subject_train.txt file
-x_test <- stores data from test/X_test.txt file
-y_test <- stores data from test/y_test.txt file
-subj_test <- stores data from test/subject_test.txt file
-X_all <- stores combined data from x_train and x_test
-y_all <- stores combined data from y_train and y_test
-subj_all <- stores combined data from subj_train and subj_test
-features <- stores data from features.txt file
-selcols <- stores the indices of features with mean() or std() in names
-features_sel <- stores selected features/measurements
-features_final <- stores features_sel plus subject and activity
-X_selcols <- selectd X data with only selected geatures/measurements included
-data <- stores the final processed data for analysis, which combines subj_all, y_all, and X_selcols
-data_grouped <- store the final processed data grouped based on subject and activity
-data_summarized <- stores means for the selected measurements
+* x_train <- stores data from train/X_train.txt file
+* y_train <- stores data from train/y_train.txt file
+* subj_train <- stores data from train/subject_train.txt file
+* x_test <- stores data from test/X_test.txt file
+* y_test <- stores data from test/y_test.txt file
+* subj_test <- stores data from test/subject_test.txt file
+* X_all <- stores combined data from x_train and x_test
+* y_all <- stores combined data from y_train and y_test
+* subj_all <- stores combined data from subj_train and subj_test
+* features <- stores data from features.txt file
+* selcols <- stores the indices of features with mean() or std() in names
+* features_sel <- stores selected features/measurements
+* features_final <- stores features_sel plus subject and activity
+* X_selcols <- selectd X data with only selected geatures/measurements included
+* data <- stores the final processed data for analysis, which combines subj_all, y_all, and X_selcols
+* data_grouped <- store the final processed data grouped based on subject and activity
+* data_summarized <- stores means for the selected measurements
 
 
 ### References
