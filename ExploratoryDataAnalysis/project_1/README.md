@@ -1,4 +1,4 @@
-<b>Note:</b> My fork of https://github.com/rdpeng/ExData_Plotting1 can be found at <b>https://github.com/bmei/ExData_Plotting1</b>
+<b>Note: My fork of https://github.com/rdpeng/ExData_Plotting1 can be found at https://github.com/bmei/ExData_Plotting1</b>
 
 
 # Project 1 for Exploratory Data Analysis
