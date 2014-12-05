@@ -11,7 +11,7 @@ mydata <- data[data$Date<="2007-02-02" & data$Date>="2007-02-01",]
 mydata$datetime <- as.POSIXlt(paste(mydata$Date, mydata$Time))
 
 # plot #3
-png("plot3.png", width=480, height=480, units="px", bg="transparent")
+png("plot3.png", width=480, height=480, units="px")
 
 x_range <- range(mydata$datetime)
 y_range <- range(mydata$Sub_metering_1, mydata$Sub_metering_2, mydata$Sub_metering_3)

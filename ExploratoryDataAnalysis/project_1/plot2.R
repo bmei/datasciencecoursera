@@ -11,7 +11,7 @@ mydata <- data[data$Date<="2007-02-02" & data$Date>="2007-02-01",]
 mydata$datetime <- as.POSIXlt(paste(mydata$Date, mydata$Time))
 
 # plot #2
-png("plot2.png", width=480, height=480, units="px", bg="transparent")
+png("plot2.png", width=480, height=480, units="px")
 
 with(mydata, plot(datetime, Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)"))
 

@@ -11,7 +11,7 @@ mydata <- data[data$Date<="2007-02-02" & data$Date>="2007-02-01",]
 mydata$datetime <- as.POSIXlt(paste(mydata$Date, mydata$Time))
 
 # plot #4
-png("plot4.png", width=480, height=480, units="px", bg="transparent")
+png("plot4.png", width=480, height=480, units="px")
 
 par(mfrow=c(2,2))             # all plots on one page
 
