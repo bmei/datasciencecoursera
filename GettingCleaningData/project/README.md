@@ -38,5 +38,3 @@ The run_analysis.R script performs the following steps:
 * Computes the average of each variable for each activity and each subject
 * Writes the results to an indepenent tidy data file named output_tidy_data.txt.
 
-
-
