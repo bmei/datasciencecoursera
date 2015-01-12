@@ -1,7 +1,7 @@
 ## Course Project - Getting and Cleaning Data
 
 ### Script Author
-Bing Mei
+##### Bing Mei
 
 
 ### Instructions
