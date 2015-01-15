@@ -1,6 +1,6 @@
 ##Reproducible Research
-####A course of Coursera Data Science Specialization
+####One of the ten Coursera Data Science Specialization courses
 
-This is a four-week course. Dec 1st - Dec 28th, 2014.
+This is a four-week course, taken from Jan. 4 to Jan. 31, 2014.
 
 © Bing Mei 2014 All Rights reserved.
