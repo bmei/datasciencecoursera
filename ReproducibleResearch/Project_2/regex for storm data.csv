@@ -1,0 +1,49 @@
+event_type,regex
+Astronomical Low Tide,astronom.*tide.*
+Avalanche,avalanc.*
+Blizzard,blizzard.*
+Coastal Flood,coast.*flood.*|coast.*storm.*|coast.*surge.*
+Cold/Wind Chill,(!extreme)*cold.*
+Extreme Cold/Wind Chill,extreme.*cold.*
+Debris Flow,debris.*flow.*
+Dense Fog,dense.*fog.*
+Dense Smoke,dense.*smoke.*
+Drought,drought.*|.*dry
+Dust Devil,dust.*devil.*
+Dust Storm,dust.*storm.*
+Flood,(!flash)*flood.*
+Flash Flood,flash.*flood.*
+Frost/Freeze,.*frost.*|freez.*
+Funnel Cloud,funnel.*cloud.*
+Freezing Fog,freez.*fog.*
+Hail,.*hail.*
+Heat,(!excessive)*heat.*
+Excessive Heat,excessive.*heat.*
+Heavy Rain,heavy.*rain.*|heavy.*shower.*|.*t.*torm|rainstorm|rain
+Heavy Snow,heavy.*snow.*|snow.*
+High Surf,high.*surf.*|high.*tide.*|high.*water.*|high.*wave.*|high.*sea.*|.*surf
+High Wind,high.*wind.*|thun.*wind
+Hurricane (Typhoon),hurrican.*|typhoon.*
+Ice Storm,ice.*|icy.*
+Lake-Effect Snow,lake.*effect.*snow
+Lakeshore Flood,lakeshore.*flood.*
+Lightning,lightn.*
+Marine Hail,marine.*hail.*
+Marine High Wind,marine.*high.*wind.*
+Marine Strong Wind,marine.*strong.*wind.*
+Marine Thunderstorm Wind,marine.*t.*wind.*
+Rip Current,rip.*current.*
+Seiche,seiche.*
+Sleet,sleet.*
+Storm Surge/Tide,storm.*surge.*tide.*
+Strong Wind,strong.*wind.*
+Thunderstorm Wind,thun.*torm.*wind.*|tstm.*w.*|t.*orm.*w.*
+Tornado,tor.*do.*
+Tropical Depression,trop.*depression.*
+Tropical Storm,trop.*storm
+Tsunami,tsunami.*
+Volcanic Ash,volc.*ash
+Waterspout,water.*spout.*
+Wildfire,wild.*fire.*|forest.*fires
+Winter Storm,wint.*torm.*|win.*mix.*
+Winter Weather,wint.*eather.*
