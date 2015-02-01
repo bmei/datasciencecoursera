@@ -96,7 +96,7 @@ print(plot)
 
 *4. Use confidence intervals and/or hypothesis tests to compare tooth growth by supp and dose*
 
-Assuming that the data is randomly sampled from a population that follows normal distribution, t tests are used to compare tooth growth by supp and dose in this study.
+Considering the small sample size (10) of each group, t test is used in this study to compare tooth growth by supp and dose. To use t test, it has to be assumed that the tooth length is approximately normally distributed within each group AND the variances of tooth length in the two groups to compare are (approximately) equal. A reference about this assumption can be found [here](https://statistics.laerd.com/statistical-guides/independent-t-test-statistical-guide.php).
 
 1\) Tooth length by dose:
 
@@ -166,4 +166,4 @@ Based on the exploratory analysis and t tests conducted above, we can conclude t
 2.	The three levels of dose produce average tooth lengths significantly different from one another at the 5% significance level.  On average, the higher the dose level, the longer the teeth.  
 3.	Supplement type (supp) is significant in producing different tooth lengths at the 10% significance level but not at 5%.  When broken down by dose levels, it is significant at the 5% significance level for dose levels of 0.5 and 1, while not at all for dose 2.  For dose levels of 0.5 and 1, the OJ supplement type produces longer teeth on average than the VC type.
 
-Finally, using t test for this analysis assumes that the data is random samples from normal distribution.
+Finally, using t test for this analysis assumes that the data is random samples from a population that follows normal distribution.
