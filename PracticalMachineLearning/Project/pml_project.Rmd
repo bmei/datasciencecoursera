@@ -9,7 +9,7 @@ Practical Machine Learning: Project
 
 *Bing Mei*
 
-*Feb. 20, 2015*
+*Feb. 22, 2015*
 
 <br>
 
@@ -107,25 +107,26 @@ training$classe <- as.factor(training$classe)
 
 ##### 1. Random Forest Model
 
-```{r eval=FALSE}
+```{r}
 rfFit <- train(classe ~ ., method = "rf", data = training, trControl = tCtrl)
 ```
 
 ##### 2. Boosting Model
 
-```{r eval=FALSE}
+```{r}
 boostFit <- train(classe ~ ., method = "gbm", data = training, trControl = tCtrl)
 ```
 
 ##### 3. SVM Model
 
-```{r eval=FALSE}
+```{r}
 svmFit <- train(classe ~ ., method = "svmRadial", data = training, trControl = tCtrl)
 ```
 
 ### Model Comparison and Selection
 
 Accuracies of the three fitted models, based on 5-fold cross validation, are shown in the plots and table below.
+
 ```{r}
 par(mfrow=c(1, 3))
 

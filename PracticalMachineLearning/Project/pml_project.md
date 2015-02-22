@@ -4,7 +4,7 @@ Practical Machine Learning: Project
 
 *Bing Mei*
 
-*Feb. 20, 2015*
+*Feb. 22, 2015*
 
 <br>
 
@@ -159,7 +159,6 @@ svmFit <- train(classe ~ ., method = "svmRadial", data = training, trControl = t
 Accuracies of the three fitted models, based on 5-fold cross validation, are shown in the plots and table below.
 
 
-
 ```r
 par(mfrow=c(1, 3))
 
@@ -188,7 +187,6 @@ accus.df <- data.frame(Fitted.Model = c("Random Forest", "Boosting (gbm)", "SVM 
 
 kable(accus.df)
 ```
-
 
 
 Fitted.Model    |  Accuracy
