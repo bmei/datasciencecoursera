@@ -37,9 +37,9 @@ shinyUI(fluidPage(
       tabsetPanel(type="tab",
                   tabPanel("Introduction", helpText(""), helpText("This is a Shiny application that helps
                             explore linear relationships between variables in the mtcars dataset.
-                            It also fits multiple linear regression models based on user selected variables or
-                            provides a best-fitted model if instructed so. With the fitted model, this application
-                            also shows model summary as well as diagnostic plots for the user.")),
+                            It fits multiple linear regression models between gas miles per gallon and user-selected
+                            variables or provides a best-fitted model if instructed so. Along with the fitted model, 
+                            this application also displays model summary as well as diagnostic plots to the user.")),
                   tabPanel("Exploration", plotOutput("explore")),
                   tabPanel("Regression Model", verbatimTextOutput("modelSum")),
                   tabPanel("Diagnostic Plots", plotOutput("modelFig")) 
