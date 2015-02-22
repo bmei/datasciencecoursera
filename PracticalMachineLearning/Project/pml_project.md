@@ -191,11 +191,11 @@ kable(accus.df)
 
 
 
-Fitted.Model      Accuracy
----------------  ---------
-Random Forest       0.9944
-Boosting (gbm)      0.9624
-SVM (Radial)        0.9328
+Fitted.Model    |  Accuracy
+--------------- | ---------
+Random Forest   |    0.9944
+Boosting (gbm)  |    0.9624
+SVM (Radial)    |    0.9328
 
 It can be seen from the plots and table that all the three models produce accuracies greater than 0.9, which is very good.  Among the three, the random forest model performs the best, reporting an accuracy of 0.9944.  Therefore, it is chosen for prediction on the `testing` dataset.
 
