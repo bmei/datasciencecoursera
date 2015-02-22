@@ -176,7 +176,7 @@ plot(svmFit$results$C, svmFit$results$Accuracy, type = "n", ylim = c(0.7, 1),
 lines(svmFit$results$C, svmFit$results$Accuracy, type="o", col="blue")
 ```
 
-![](pml_project_final_files/figure-html/unnamed-chunk-16-1.png) 
+![](pml_project_files/figure-html/unnamed-chunk-16-1.png) 
 
 
 ```r
