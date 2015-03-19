@@ -1,8 +1,12 @@
+library(shiny)
+library(DT)
+
 data(mtcars)
 mtcars$cyl <- as.factor(mtcars$cyl)
 mtcars$am <- as.factor(mtcars$am)
 mtcars$gear <- as.factor(mtcars$gear)
 mtcars$carb <- as.factor(mtcars$carb)
+mtcars$vs <- as.factor(mtcars$vs)
 
 shinyServer(
   function(input, output) {
@@ -11,7 +15,15 @@ shinyServer(
     explore <- reactive({
       
       if (input$fitbest) {
-        cardata <- mtcars[, -which(names(mtcars) %in% c("vs"))]
+        modnames <- names(model()$coefficients)
+        varnames <- c()
+        for (i in 1:length(modnames)) {
+          tmpname <- substr(modnames[i], 1, nchar(modnames[i])-1)
+          if (tmpname %in% names(mtcars)) varnames <- c(varnames, tmpname)
+          else varnames <- c(varnames, modnames[i])
+        }
+        
+        cardata <- mtcars[, which(names(mtcars) %in% c("mpg", varnames))]
       }
       else {
         cardata <- mtcars[, which(names(mtcars) %in% c("mpg", input$chk_variables))]
@@ -41,6 +53,11 @@ shinyServer(
       }
     })
 
+    # data
+    output$data <- renderDataTable({
+      datatable(mtcars)
+    })
+    
     # exploratory analysis
     output$explore <- renderPlot({
       input$bfit

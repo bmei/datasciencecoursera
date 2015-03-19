@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factors Impacting Auto Gas Efficiency</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Factors Impacting Auto Gas Efficiency">
+  <meta name="author" content="Bing Mei">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Factors Impacting Auto Gas Efficiency</h1>
+    <h2>Shiny Application Project for Developing Data Products Course</h2>
+    <p>Bing Mei<br/>March 22, 2015</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br>
+This <a href="https://bmei.shinyapps.io/Project/">Shiny application</a> helps:</p>
+
+<ol>
+<li><p>explore linear relationships between variables in the <code>mtcars</code> dataset;</p></li>
+<li><p>fit multiple linear regression models between gas miles per gallon (mpg) and user-selected variables;</p></li>
+<li><p>fit a best-fitted model automatically if instructed so; and</p></li>
+<li><p>display model summary, diagnostic plots, as well as the data on which model fitting is made.</p></li>
+</ol>
+
+<p>With this app, exploration of the <code>mtcars</code> data and fitting models between the miles per gallon (mpg) variable and the other variables are made very easy, saving the analyst a bit time and effort. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here is a screenshot of the shiny app.</p>
+
+<p><img src="mtcars_app.png" width=1000></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How to Use this App</h2>
+  </hgroup>
+  <article data-timings="">
+    <h5>The following steps can be followed to use this application:</h5>
+
+<ol>
+<li><p>In the sidebar panel on the left, select the variables you wish to use as predictor variables, and then click the <code>Explore \ Fit a Model</code> button.</p></li>
+<li><p>To let the application fit a best model for you, check the <code>Fit a best model</code> checkbox and then click
+the <code>Explore \ Fit a Model</code> button. Once this box is checked, all the variables you chose in step 1 are ignored. Instead, the app chooses the variables that can best explain the dependent variable for you with the highest <code>adjusted</code> R squared value.</p></li>
+<li><p>By clicking the <code>Explore \ Fit a Model</code> button, the app performs exploratory data analysis and linear regression model fitting.</p></li>
+<li><p>To check the linear relationship / correlation between any two variables (incluidng the dependent variable, mpg), go to the Exploration tab.</p></li>
+<li><p>To see the fitted linear regression model and model summary, go to the Regression Model tab.</p></li>
+<li><p>To analyze and diagnose the fitted model, four diagnostic plots of the model are on the Diagnostic Plots tab.</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Code Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The core code used to fit the <code>best</code> multiple regression model is as follows.</p>
+
+<pre><code class="r">init_model &lt;- lm(mpg ~ ., data = mtcars)
+modelFit &lt;- step(init_model, direction=&quot;both&quot;, trace=0); modelFit
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ cyl + hp + wt + am, data = mtcars)
+## 
+## Coefficients:
+## (Intercept)         cyl6         cyl8           hp           wt  
+##    33.70832     -3.03134     -2.16368     -0.03211     -2.49683  
+##         am1  
+##     1.80921
+</code></pre>
+
+<p>An initial model is fitted with all the other variables (besides the independent variable, mpg) in the dataset included.  Then the <em>step</em> function is used to remove the variables which has no significant contribution to the model and finally result in a model with the highest <code>adjusted</code> R squared value.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The Application'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='How to Use this App'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Code Example'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
