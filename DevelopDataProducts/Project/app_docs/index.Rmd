@@ -2,12 +2,12 @@
 title       : Factors Impacting Auto Gas Efficiency
 subtitle    : Shiny Application Project for Developing Data Products Course
 author      : Bing Mei
-job         : March 22, 2015
+job         : March 18, 2015
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : selfcontained # {standalone, draft}
+mode        : standalone    # {standalone, selfcontained, draft}
 knit        : slidify::knit2slides
 ---
 
@@ -31,7 +31,7 @@ With this app, exploration of the `mtcars` data and fitting models between the m
 
 Here is a screenshot of the shiny app.
 
-<img src="mtcars_app.png" width=1000>
+<img src="mtcars_app.png" width="1000">
 
 --- .class #id
 
@@ -39,13 +39,10 @@ Here is a screenshot of the shiny app.
 
 ##### The following steps can be followed to use this application:
 
-1. In the sidebar panel on the left, select the variables you wish to use as predictor variables, and then click the `Explore \ Fit a Model` button.
-
+1. In the sidebar panel on the left, select the variables you wish to use as predictor variables (and make sure the `Fit a best model` box unchecked), and then click the `Explore \ Fit a Model` button.
 2. To let the application fit a best model for you, check the `Fit a best model` checkbox and then click
-the `Explore \ Fit a Model` button. Once this box is checked, all the variables you chose in step 1 are ignored. Instead, the app chooses the variables that can best explain the dependent variable for you with the highest `adjusted` R squared value.
-
+the `Explore \ Fit a Model` button. The app chooses the variables that can best explain the dependent variable for you with the highest `adjusted` R squared value.
 3. By clicking the `Explore \ Fit a Model` button, the app performs exploratory data analysis and linear regression model fitting.
-
 4. To check the linear relationship / correlation between any two variables (incluidng the dependent variable, mpg), go to the Exploration tab.
 5. To see the fitted linear regression model and model summary, go to the Regression Model tab.
 6. To analyze and diagnose the fitted model, four diagnostic plots of the model are on the Diagnostic Plots tab.
@@ -55,7 +52,6 @@ the `Explore \ Fit a Model` button. Once this box is checked, all the variables 
 ## Code Example
 
 The core code used to fit the `best` multiple regression model is as follows.
-
 ```{r eval=FALSE}
 init_model <- lm(mpg ~ ., data = mtcars)
 modelFit <- step(init_model, direction="both", trace=0); modelFit
@@ -71,5 +67,4 @@ init_model <- lm(mpg ~ ., data = mtcars)
 modelFit <- step(init_model, direction="both", trace=0); modelFit
 ```
 
-
-An initial model is fitted with all the other variables (besides the independent variable, mpg) in the dataset included.  Then the <em>step</em> function is used to remove the variables which has no significant contribution to the model and finally result in a model with the highest adjusted R squared value.
+An initial model is fitted with all available variables in the dataset included.  Then the <em>step</em> function removes the variables that has no significant contribution to the model and returns a model with the highest adjusted R squared value.
